@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3OK - Solana AI Chatbot</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#1E1E1E">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/index.iife.min.js"></script>
+    <script src="js/index.umd.js"></script>
+    <link href="css/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-text">INITIALIZING WEB3OK</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-status">Loading AI modules...</div>
+        </div>
+    </div>
+
+    <!-- Hackathon Banner -->
+    <div class="hackathon-banner">
+        <div class="hackathon-content">
+            <div class="ornament left">⟢</div>
+            <div class="terminal-prompt">
+                <span class="prompt-symbol">⬤</span>
+                <span class="prompt-text">echo $HACKATHON_STATUS</span>
+            </div>
+            <div class="hackathon-info">
+                <span class="badge">SOLANA AI HACKATHON SUBMISSION</span>
+            </div>
+            <div class="ornament right">⟣</div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control maximize"></span>
+            </div>
+            <div class="terminal-title">web3ok — solana — 80×24</div>
+        </div>
+        <div class="nav-center">
+            <div class="contract-address" onclick="copyContractAddress()">
+                <span class="address-label">$</span>
+                <span class="address full-address" id="contractAddress">Coming Soon</span>
+                <span class="address truncated-address">Soon</span>
+                <span class="copy-tooltip">Click to copy</span>
+            </div>
+        </div>
+        <div class="nav-right">
+            <div class="social-links">
+                <a href="https://github.com/Ganthology/solana-ai-chatbot" target="_blank" class="social-link">
+                    <img src="images/github.svg" alt="GitHub" class="social-icon">
+                </a>
+                <a href="https://x.com/web3ok_ai" target="_blank" class="social-link">
+                    <img src="images/x.svg" alt="X" class="social-icon">
+                </a>
+            </div>
+            <button id="connectWallet" class="connect-wallet-btn">Connect Wallet</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="terminal-container">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="prompt">Last login: <span id="lastLogin">...</span></div>
+                </div>
+                <div class="terminal-body">
+                    <div class="message-container">
+                        <div class="system-message">
+                            <span class="prompt">web3ok@solana:~$</span> whoami
+                        </div>
+                        <div class="response matrix-text">
+                            <div class="project-description">
+                                <p>Web3OK is the first Solana AI assistant for natural language transactions, token tracking, NFT management, Jupiter DEX integration, and portfolio analytics.</p>
+                            </div>
+                        </div>
+
+                        <div class="system-message">
+                            <span class="prompt">web3ok@solana:~$</span> features
+                        </div>
+                        <div class="response feature-grid">
+                            <div class="feature-item">
+                                <h3>🤖 AI-Powered Operations</h3>
+                                <p>Natural language interface for all your Solana operations. Just chat and execute.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3>💰 Token Management</h3>
+                                <p>Track prices, manage portfolios, and execute trades with simple commands.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3>🎨 NFT Suite</h3>
+                                <p>Mint, trade, and analyze NFTs through conversational AI interface.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h3>🔄 DEX Integration</h3>
+                                <p>Seamless integration with Jupiter for optimal token swaps and liquidity.</p>
+                            </div>
+                        </div>
+                        <div class="system-message">
+                            <span class="prompt">web3ok@solana:~$</span> capabilities
+                        </div>
+                        <div class="response capabilities-list">
+                            <div class="capability">
+                                <span class="capability-icon">⚡</span>
+                                <span class="capability-text">Real-time token price tracking</span>
+                            </div>
+                            <div class="capability">
+                                <span class="capability-icon">🔒</span>
+                                <span class="capability-text">Secure staking operations</span>
+                            </div>
+                            <div class="capability">
+                                <span class="capability-icon">🚀</span>
+                                <span class="capability-text">One-click token launches</span>
+                            </div>
+                            <div class="capability">
+                                <span class="capability-icon">💱</span>
+                                <span class="capability-text">Optimized DEX routing</span>
+                            </div>
+                        </div>
+                        <div class="system-message">
+                            <span class="prompt">web3ok@solana:~$</span> stats
+                        </div>
+                        <div class="response stats-list">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Volume:</span>
+                                <span class="stat-value">COMING SOON</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Active Users:</span>
+                                <span class="stat-value">COMING SOON</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Transactions:</span>
+                                <span class="stat-value">COMING SOON</span>
+                            </div>
+                        </div>
+                        <div class="system-message">
+                            <span class="prompt">web3ok@solana:~$</span> connect
+                        </div>
+                        <div class="response connect-list">
+                            <div class="connect-item">
+                                <span class="connect-icon">🔗</span>
+                                <span class="connect-text">Connect your wallet</span>
+                            </div>
+                        </div>
+                        <div class="system-message">
+                            <span class="prompt">web3ok@solana:~$</span> help
+                        </div>
+                        <div class="response commands-list">
+                            <div class="command-group">
+                                <h3>Available Commands:</h3>
+                                <div class="command-item">
+                                    <code>whoami</code> - Display information about Web3OK
+                                </div>
+                                <div class="command-item">
+                                    <code>features</code> - Show platform features
+                                </div>
+                                <div class="command-item">
+                                    <code>capabilities</code> - List platform capabilities
+                                </div>
+                                <div class="command-item">
+                                    <code>stats</code> - Show platform statistics
+                                </div>
+                                <div class="command-item">
+                                    <code>connect</code> - Connect your wallet
+                                </div>
+                                <div class="command-item">
+                                    <code>stake</code> - Stake your tokens
+                                </div>
+                                <div class="command-item">
+                                    <code>mint</code> - Mint new NFTs
+                                </div>
+                                <div class="command-item">
+                                    <code>swap</code> - Swap tokens via Jupiter
+                                </div>
+                                <div class="command-item">
+                                    <code>launch</code> - Launch new token
+                                </div>
+                                <div class="command-item">
+                                    <code>help</code> - Show this help message
+                                </div>
+                            </div>
+                        </div>
+                        <div class="system-message">
+                            <span class="prompt">web3ok@solana:~$</span> <span class="cursor">█</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Wallet Connection Modal -->
+    <div id="walletModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Connect Wallet</h2>
+                <button class="close-modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="wallet-option" id="phantomWallet">
+                    <img src="images/phantom.svg" alt="Phantom">
+                    <span>Phantom</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/prism.min.js"></script>
+    <script src="js/main.js"></script>
+
+ </body></html>
